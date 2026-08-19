@@ -17,9 +17,9 @@ export default function ClientTicker() {
   return (
     <section
       aria-label="Brands we work with"
-      className="border-b border-line bg-surface/40 py-8"
+      className="border-y border-[#171717]/5 bg-[#F4F4F5]/50 py-8"
     >
-      <p className="mb-6 text-center font-mono text-xs uppercase tracking-[0.2em] text-muted">
+      <p className="mb-6 text-center font-mono text-xs uppercase tracking-[0.2em] text-[#737373]">
         Trusted by ambitious brands
       </p>
       <div
@@ -33,7 +33,7 @@ export default function ClientTicker() {
           {doubled.map((client, i) => (
             <span
               key={`${client}-${i}`}
-              className="whitespace-nowrap text-lg font-semibold tracking-tight text-white/35"
+              className="whitespace-nowrap text-lg font-semibold tracking-tight text-[#171717]/30"
             >
               {client}
             </span>

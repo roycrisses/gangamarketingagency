@@ -1,8 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Playfair_Display, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
@@ -25,8 +30,7 @@ export const metadata = {
   ],
   openGraph: {
     title: "Ganga Marketing Agency — Performance Marketing in Nepal",
-    description:
-      "Paid ads, SEO and social that turn clicks into customers.",
+    description: "Paid ads, SEO and social that turn clicks into customers.",
     url: "https://gangamarketingagency.com.np",
     siteName: "Ganga Marketing Agency",
     locale: "en_US",
@@ -37,7 +41,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0d0d0d",
+  themeColor: "#FAFAF9",
 };
 
 export default function RootLayout({ children }) {
@@ -45,7 +49,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}

@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback, useEffect, useRef } from 'react';
 
 import './ScrollExpand.css';
@@ -43,19 +45,21 @@ const ScrollExpand = ({
   const hintRef = useRef(null);
 
   const propsRef = useRef({});
-  propsRef.current = {
-    startWidth,
-    startHeight,
-    startRadius,
-    endRadius,
-    mediaZoom,
-    scrollDistance,
-    holdDistance,
-    smoothing,
-    overlayScrim,
-    useWindowScroll,
-    enabled
-  };
+  useEffect(() => {
+    propsRef.current = {
+      startWidth,
+      startHeight,
+      startRadius,
+      endRadius,
+      mediaZoom,
+      scrollDistance,
+      holdDistance,
+      smoothing,
+      overlayScrim,
+      useWindowScroll,
+      enabled
+    };
+  });
 
   const applyProgress = useCallback(p => {
     const frame = frameRef.current;
@@ -198,6 +202,7 @@ const ScrollExpand = ({
         playsInline
       />
     ) : (
+      // eslint-disable-next-line @next/next/no-img-element
       <img ref={mediaRef} className="scroll-expand__media" src={src} alt={alt} draggable={false} />
     );
 

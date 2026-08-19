@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CandyButton from "@/components/CandyButton";
 import { handleWhatsAppSubmit, getWhatsAppContactUrl } from "@/utils/whatsapp";
 
 const SERVICE_OPTIONS = [
@@ -21,7 +22,7 @@ const BUDGET_OPTIONS = [
 ];
 
 const inputClasses =
-  "w-full rounded-lg border border-line bg-white/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-muted/60 outline-none transition-colors focus:border-accent/60 focus:ring-1 focus:ring-accent/40";
+  "w-full rounded-lg border border-[#171717]/10 bg-white px-4 py-3 text-sm text-[#171717] placeholder:text-[#737373]/60 outline-none transition-colors focus:border-[#2563EB]/60 focus:ring-1 focus:ring-[#2563EB]/40";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -71,42 +72,42 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="border-b border-line">
-      <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2">
+    <section id="contact" className="border-b border-[#171717]/5">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-2">
         <div>
-          <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-accent">
+          <p className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-[#2563EB]">
             Contact
           </p>
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-[#171717] sm:text-5xl">
             Let&apos;s grow your business.
           </h2>
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-muted sm:text-base">
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-[#737373] sm:text-base">
             Tell us where you&apos;re stuck. We&apos;ll reply on WhatsApp
-            within a few business hours with honest next steps — whether that&apos;s
-            a paid campaign, a new site, or a full growth plan.
+            within a few business hours with honest next steps — whether
+            that&apos;s a paid campaign, a new site, or a full growth plan.
           </p>
 
           <dl className="mt-10 space-y-4">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-line bg-white/[0.03]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#171717]/10 bg-white">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.6"
-                  className="h-4 w-4 text-accent"
+                  className="h-4 w-4 text-[#2563EB]"
                 >
                   <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.8.7a2 2 0 0 1 1.7 2Z" />
                 </svg>
               </span>
               <div>
-                <dt className="text-xs text-muted">WhatsApp</dt>
+                <dt className="text-xs text-[#737373]">WhatsApp</dt>
                 <dd>
                   <a
                     href={getWhatsAppContactUrl("Hello Ganga Marketing Agency!")}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-semibold hover:text-accent"
+                    className="text-sm font-semibold text-[#171717] hover:text-[#2563EB]"
                   >
                     +977 970-080-4395
                   </a>
@@ -114,39 +115,41 @@ export default function ContactForm() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-line bg-white/[0.03]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#171717]/10 bg-white">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.6"
-                  className="h-4 w-4 text-accent"
+                  className="h-4 w-4 text-[#2563EB]"
                 >
                   <path d="M12 20s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" />
                   <circle cx="12" cy="9" r="2.5" />
                 </svg>
               </span>
               <div>
-                <dt className="text-xs text-muted">Based in</dt>
-                <dd className="text-sm font-semibold">Kathmandu, Nepal</dd>
+                <dt className="text-xs text-[#737373]">Based in</dt>
+                <dd className="text-sm font-semibold text-[#171717]">
+                  Kathmandu, Nepal
+                </dd>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-line bg-white/[0.03]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#171717]/10 bg-white">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.6"
-                  className="h-4 w-4 text-accent"
+                  className="h-4 w-4 text-[#2563EB]"
                 >
                   <rect x="3" y="5" width="18" height="14" rx="2" />
                   <path d="m3 7 9 6 9-6" />
                 </svg>
               </span>
               <div>
-                <dt className="text-xs text-muted">Email</dt>
-                <dd className="text-sm font-semibold">
+                <dt className="text-xs text-[#737373]">Email</dt>
+                <dd className="text-sm font-semibold text-[#171717]">
                   hello@gangamarketingagency.com.np
                 </dd>
               </div>
@@ -156,12 +159,14 @@ export default function ContactForm() {
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 rounded-2xl border border-line bg-surface p-6 sm:p-8"
+          className="flex flex-col gap-4 rounded-2xl border border-[#171717]/10 bg-white p-6 shadow-sm sm:p-8"
           noValidate
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="flex flex-col gap-1.5">
-              <span className="text-xs font-medium text-muted">Full name *</span>
+              <span className="text-xs font-medium text-[#737373]">
+                Full name *
+              </span>
               <input
                 name="name"
                 value={form.name}
@@ -173,7 +178,7 @@ export default function ContactForm() {
               />
             </label>
             <label className="flex flex-col gap-1.5">
-              <span className="text-xs font-medium text-muted">
+              <span className="text-xs font-medium text-[#737373]">
                 Phone number *
               </span>
               <input
@@ -190,7 +195,7 @@ export default function ContactForm() {
           </div>
 
           <label className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium text-muted">
+            <span className="text-xs font-medium text-[#737373]">
               Service needed *
             </span>
             <select
@@ -204,7 +209,7 @@ export default function ContactForm() {
                 Select a service
               </option>
               {SERVICE_OPTIONS.map((s) => (
-                <option key={s} value={s} className="bg-surface">
+                <option key={s} value={s}>
                   {s}
                 </option>
               ))}
@@ -212,7 +217,7 @@ export default function ContactForm() {
           </label>
 
           <label className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium text-muted">
+            <span className="text-xs font-medium text-[#737373]">
               Monthly budget
             </span>
             <select
@@ -221,11 +226,11 @@ export default function ContactForm() {
               onChange={handleChange}
               className={`${inputClasses} appearance-none`}
             >
-              <option value="" disabled className="bg-surface">
+              <option value="" disabled>
                 Select a range (optional)
               </option>
               {BUDGET_OPTIONS.map((b) => (
-                <option key={b} value={b} className="bg-surface">
+                <option key={b} value={b}>
                   {b}
                 </option>
               ))}
@@ -233,7 +238,7 @@ export default function ContactForm() {
           </label>
 
           <label className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium text-muted">
+            <span className="text-xs font-medium text-[#737373]">
               Message *
             </span>
             <textarea
@@ -249,34 +254,23 @@ export default function ContactForm() {
           </label>
 
           {status === "error" && (
-            <p className="text-sm text-red-400">
+            <p className="text-sm text-red-500">
               Please fill in all required fields.
             </p>
           )}
           {status === "done" && (
-            <p className="text-sm text-accent">
-              Opening WhatsApp — talk soon!
-            </p>
+            <p className="text-sm text-[#2563EB]">Opening WhatsApp — talk soon!</p>
           )}
 
-          <button
+          <CandyButton
             type="submit"
             disabled={status === "opening"}
-            className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-black transition-all hover:shadow-[0_0_40px_rgba(216,255,63,0.35)] disabled:opacity-60"
+            className="mt-2 w-full"
           >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="h-4 w-4"
-            >
-              <path d="M5 12h14m-6-6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
             {status === "opening" ? "Opening WhatsApp..." : "Send Inquiry"}
-          </button>
+          </CandyButton>
 
-          <p className="text-center font-mono text-[11px] leading-relaxed text-muted">
+          <p className="text-center font-mono text-[11px] leading-relaxed text-[#737373]">
             Submitting opens a pre-filled WhatsApp chat. Your inquiry is sent
             instantly — no waiting.
           </p>
